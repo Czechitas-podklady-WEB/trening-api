@@ -8,7 +8,7 @@ permalink: /filmove-api
 
 ## Seznam filmů [GET]
 
-`{{ site.url }}/movies`
+`{{ site.apibase }}/movies`
 
 | Parametr | Typ | Příklad |
 |----------|-----|---------|
