@@ -6,6 +6,8 @@ permalink: /filmove-api
 
 # Filmové API
 
+Obsahuje informace o několika filmech z filmové databáze ČSFD.
+
 ## Seznam filmů [GET]
 
 `{{ site.apibase }}/movies`

@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import { moviesRouter } from './apis/movies/index.js';
+import { passwordsRouter } from './apis/passwords.js';
 
 const port = process.env.PORT || 4000;
 const baseUrl = process.env.BASE_URL || '';
@@ -18,5 +19,6 @@ app.use(`${baseUrl}/docs`, express.static('docs/_site', {
 }));
 
 app.use(`${baseUrl}/apis/movies`, moviesRouter);
+app.use(`${baseUrl}/apis/passwords`, passwordsRouter);
 
 app.listen(port, () => console.log(`Listening on ${port}`));
