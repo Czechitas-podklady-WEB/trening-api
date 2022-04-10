@@ -49,6 +49,6 @@ moviesRouter.get('/:id', (req, res) => {
   if (movie) {
     res.status(200).json(movie);
   } else {
-    res.status(404).json({ message: 'Not found' });
+    res.status(404).json({ error: 'not-found' });
   }
 });
