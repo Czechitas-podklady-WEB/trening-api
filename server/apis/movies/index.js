@@ -42,3 +42,13 @@ moviesRouter.get("/", (req, res) => {
   });
   res.status(200).json(filtered);
 });
+
+moviesRouter.get('/:id', (req, res) => {
+  const id = req.params.id ? Number(req.params.id) : null;
+  const movie = movies.find((movie) => movie.id === id);
+  if (movie) {
+    res.status(200).json(movie);
+  } else {
+    res.status(404).json({ message: 'Not found' });
+  }
+});
