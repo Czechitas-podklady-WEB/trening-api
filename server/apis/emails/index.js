@@ -12,19 +12,19 @@ emailsRouter.get("/", (req, res) => {
   const folder = req.query.folder ?? 'all';
 
   if (folder === 'all') {
-    res.status(200).json({ data: emailReferences });
+    res.status(200).json({ emails: emailReferences });
     return;
   }
 
   if (folder === 'unread') {
     const filtered = emailReferences.filter((email) => email.unread === true);
-    res.status(200).json({ data: filtered });
+    res.status(200).json({ emails: filtered });
     return;
   }
 
   if (folder === 'read') {
     const filtered = emailReferences.filter((email) => email.unread === false);
-    res.status(200).json({ data: filtered });
+    res.status(200).json({ emails: filtered });
     return;
   }
 
