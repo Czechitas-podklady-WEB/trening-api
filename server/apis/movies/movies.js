@@ -71,7 +71,7 @@ export default [
       "krimi",
       "mysteriózní",
       "psychologický",
-      "rama"
+      "drama"
     ],
     "origin": "USA",
     "year": 1995,
