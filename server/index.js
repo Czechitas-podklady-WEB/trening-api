@@ -20,7 +20,7 @@ app.use(`${baseUrl}/docs`, express.static('docs/_site', {
   extensions: ['html'],
 }));
 
-app.use(`${baseUrl}/apis/movies`, moviesRouter);
+app.use(`${baseUrl}/apis/movie-api`, moviesRouter);
 app.use(`${baseUrl}/apis/passwords`, passwordsRouter);
 app.use(`${baseUrl}/apis/shopping`, shoppingRouter);
 app.use(`${baseUrl}/apis/emails`, emailsRouter);

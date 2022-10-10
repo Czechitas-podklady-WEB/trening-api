@@ -12,7 +12,7 @@ const moviesSimplified = movies.map((movie) => ({
 
 export const moviesRouter = express.Router();
 
-moviesRouter.get("/", (req, res) => {
+moviesRouter.get("/movies", (req, res) => {
   const genre = req.query.genre ? String(req.query.genre) : null;
   const year = req.query.year ? Number(req.query.year) : null;
 
@@ -43,7 +43,7 @@ moviesRouter.get("/", (req, res) => {
   res.status(200).json(filtered);
 });
 
-moviesRouter.get('/:id', (req, res) => {
+moviesRouter.get('/movies/:id', (req, res) => {
   const id = req.params.id ? Number(req.params.id) : null;
   const movie = movies.find((movie) => movie.id === id);
   if (movie) {
@@ -51,4 +51,9 @@ moviesRouter.get('/:id', (req, res) => {
   } else {
     res.status(404).json({ error: 'not-found' });
   }
+});
+
+moviesRouter.get('/genres', (req, res) => {
+  const genres = new Set(movies.flatMap((movie) => movie.genres));
+  res.send(Array.from(genres));
 });
