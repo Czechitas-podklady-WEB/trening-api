@@ -10,7 +10,7 @@ Obsahuje informace o několika filmech z filmové databáze ČSFD.
 
 ## Seznam filmů [GET]
 
-`{{ site.apibase }}/movies`
+`{{ site.apibase }}/movie-api/movies`
 
 | Parametr | Typ | Příklad |
 |----------|-----|---------|
@@ -19,4 +19,8 @@ Obsahuje informace o několika filmech z filmové databáze ČSFD.
 
 ## Detail filmu [GET]
 
-`{{ site.apibase }}/movies/{id}`
+`{{ site.apibase }}/movie-api/movies/{id}`
+
+## Seznam žánrů [GET]
+
+`{{ site.apibase }}/movie-api/genres`
