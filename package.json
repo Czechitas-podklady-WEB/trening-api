@@ -8,7 +8,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "nodemon server/index.js"
+    "dev": "nodemon server/index.js",
+    "build-docs": "bundle exec jekyll build",
   },
   "repository": {
     "type": "git",
