@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "nodemon server/index.js",
-    "build-docs": "bundle exec jekyll build"
+    "build-docs": "cd docs && bundle exec jekyll build -c _config.yml"
   },
   "repository": {
     "type": "git",
