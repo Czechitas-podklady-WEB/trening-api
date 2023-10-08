@@ -36,5 +36,6 @@ const workshop = (assetsUrl) => ({
 export const workshopRouter = express.Router();
 
 workshopRouter.get("/", (req, res) => {
-  res.status(200).json(workshop(`${req.protocol}://${req.get('host')}/assets`));
+  const serverUrl = process.env.SERVER_URL ?? `${req.protocol}://${req.get('host')}`;
+  res.status(200).json(workshop(`${serverUrl}/assets`));
 });
