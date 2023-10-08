@@ -21,7 +21,7 @@ const workshop = (assetsUrl) => ({
     name: "IT-Bootcamp",
     street: "Polovidičové náměstí 837/11",
     city: "Praha",
-    photo: `${assetsUrl}/marie.png`,
+    photo: `${assetsUrl}/bootcamp.jpg`,
     instructions: "Vstup do budovy je z ulice Polovodičové náměstí. V přízemí budovy se nachází recepce, kde se přihlaste. Výtahem se pak dostanete do 3. patra, kde se nachází naše učebna.",
   },
   instructor: {
@@ -29,7 +29,7 @@ const workshop = (assetsUrl) => ({
     email: "marie.pokorna@it-bootcamp.cz",
     profession: "Senior full-stack vývojářka",
     bio: "Marie je zkušená lektorka, která se věnuje výuce programování již od svých 21 let. Její oblíbené technologie jsou React a Node.js. V současné době pracuje jako vývojářka v jedné z největších českých softwarových firem.",
-    photo: `${assetsUrl}/bootcamp.jpg`,
+    avatar: `${assetsUrl}/marie.png`,
   },
 });
 
