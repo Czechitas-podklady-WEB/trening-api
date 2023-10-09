@@ -6,6 +6,7 @@ import { shoppingRouter } from './apis/shopping/index.js';
 import { emailsRouter } from './apis/emails/index.js';
 import { tasksRouter } from './apis/tasks/index.js';
 import { workshopRouter } from './apis/workshop.js';
+import { realitkaRouter } from './apis/realitka.js';
 
 const port = process.env.PORT || 4000;
 const baseUrl = process.env.BASE_URL || '';
@@ -30,5 +31,6 @@ app.use(`${baseUrl}/apis/shopping`, shoppingRouter);
 app.use(`${baseUrl}/apis/emails`, emailsRouter);
 app.use(`${baseUrl}/apis/tasks-api`, tasksRouter);
 app.use(`${baseUrl}/apis/workshop`, workshopRouter);
+app.use(`${baseUrl}/apis/realitka`, realitkaRouter);
 
 app.listen(port, () => console.log(`Listening on ${port}`));
